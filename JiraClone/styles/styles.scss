@@ -1,0 +1,1139 @@
+:root {
+  --light-blue: #f4f5f7;
+  --main-background: #fff;
+  --text-gray: #42526e;
+  --main-text: #253858;
+  --gray: #eaecf0;
+  --main-blue: #0052cc;
+}
+
+// FONTS
+
+@font-face {
+  font-family: "Charlie";
+  src: url("../fonts/charlie/Charlie\ -\ Personal\ Use.ttf");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-blue);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+section {
+  padding: 20px 0;
+}
+
+// Overall classes
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.row {
+  display: flex;
+  align-items: center;
+}
+.col {
+  width: auto;
+}
+.col-1 {
+  width: 10%;
+}
+.col-2 {
+  width: 20%;
+}
+.col-3 {
+  width: 30%;
+}
+.col-4 {
+  width: 40%;
+}
+.col-5 {
+  width: 50%;
+}
+.col-6 {
+  width: 60%;
+}
+.col-7 {
+  width: 70%;
+}
+.col-8 {
+  width: 80%;
+}
+.col-9 {
+  width: 90%;
+}
+.col-10 {
+  width: 100%;
+}
+.divider__vertical {
+  margin-left: 1rem;
+  height: 25px;
+  width: 1px;
+  background-color: #dfe1e5;
+}
+
+.heading {
+  color: var(--main-text);
+  line-height: 3.5rem;
+  letter-spacing: 0;
+}
+
+.h1 {
+  font-size: 3rem;
+  margin-bottom: 24px;
+}
+.h2 {
+  font-size: 2.25rem;
+  margin-bottom: 18px;
+}
+.h3 {
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+}
+.paragraph {
+  color: var(--main-text);
+  font-size: 1.25rem;
+}
+.text-center {
+  text-align: center;
+}
+.navbar {
+  height: auto;
+  overflow: visible;
+  .navbar-row {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    .navbar-nav {
+      display: flex;
+      align-items: center;
+      .nav-item {
+        margin-left: 2px;
+        float: left;
+        color: var(--text-gray);
+        cursor: pointer;
+        padding: 4px 25px 4px 14px;
+        position: relative;
+        border-radius: 2px;
+        &:hover {
+          background-color: var(--gray);
+        }
+      }
+      .nav-item__arrow {
+        &:after {
+          background: url(../images/arrow-down.svg) no-repeat;
+          content: "";
+          display: inline-block;
+          height: 10px;
+          margin-left: 6px;
+          position: absolute;
+          top: 14px;
+          width: 10px;
+        }
+      }
+      .nav-item__blue {
+        color: var(--main-blue);
+      }
+      .nav-item__small {
+        font-size: 15px;
+      }
+    }
+    .nav__left {
+      display: flex;
+      .navbar-brand {
+        margin-right: 12px;
+        width: 193px;
+        height: 72px;
+        display: flex;
+        img {
+          vertical-align: baseline;
+          margin: auto;
+        }
+      }
+    }
+    .nav__right {
+      align-items: center;
+      display: flex;
+      float: right;
+      min-height: 72px;
+      position: relative;
+    }
+  }
+}
+
+.btn-outlined {
+  background: transparent;
+  color: var(--main-blue);
+  border: 1px solid var(--main-blue);
+  font-size: 0.875rem;
+  height: 30px;
+  line-height: 2;
+  padding: 0 10px;
+  font-weight: 500;
+  border-radius: 3px;
+}
+
+.btn-contained {
+  background-color: var(--main-blue);
+  color: white;
+}
+
+.horizontal-line {
+  width: 50%;
+  text-align: center;
+  color: var(--gray);
+  margin: 40px auto;
+}
+
+.card__link {
+  font-size: 16px;
+  position: relative;
+  display: block;
+  margin-top: 50px;
+  transition: 0.3s ease;
+  &::after {
+    transition: 0.3s ease;
+    top: 5px;
+    background: url(../images/arrow-right.svg) no-repeat;
+    content: "";
+    display: inline-block;
+    height: 15px;
+    margin-left: 2px;
+    position: absolute;
+    width: 30px;
+  }
+  &:hover {
+    &::after {
+      transform: translateX(10px);
+    }
+  }
+}
+
+// Exact classes
+.global__nav {
+  background-color: var(--light-blue);
+  height: 72px;
+  line-height: 24px;
+  padding: 0;
+  position: relative;
+  z-index: 12;
+  .search-button {
+    padding: 4px;
+    border-radius: 50%;
+    &:hover {
+      background-color: var(--gray);
+    }
+  }
+  .avatar-user {
+    display: initial;
+    margin-bottom: -6px;
+  }
+}
+
+.project__nav {
+  box-shadow: 0 2px 10px rgb(167, 167, 167);
+  .nav__left {
+    .navbar-nav {
+      padding-top: 10px;
+    }
+  }
+}
+.image-depth {
+  img {
+    box-shadow: 6px 30px 30px rgb(228, 228, 228);
+  }
+}
+.advantages {
+  max-width: 1400px;
+  padding-top: 6rem;
+
+  .step {
+    margin-top: 5rem;
+  }
+  .step-1 {
+    .text-box {
+      padding-right: 100px;
+      padding-left: 2.5rem;
+    }
+  }
+  .step-2 {
+    .text-box {
+      padding-left: 100px;
+      padding-right: 2.5rem;
+    }
+  }
+  .step-3 {
+    margin-top: 11rem;
+    justify-content: center;
+  }
+
+  .flow {
+    margin-top: 8rem;
+    img {
+      margin: auto;
+    }
+  }
+  .box {
+    margin-top: 2rem;
+  }
+}
+
+.integrations {
+  .card-wrapper {
+    .integration-card {
+      margin-top: 5rem;
+      padding-right: 0.5rem;
+      .integration-card__img {
+        height: 66px;
+      }
+      .integration-card__header {
+        font-size: 20px;
+        line-height: 1.3;
+        margin: 24px 0;
+      }
+      .integration-card__paragraph {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.automation {
+  margin-top: 64px;
+  position: relative;
+  background-color: #172b4d;
+  padding: 64px 10px;
+  .automation__header {
+    color: white;
+  }
+  .automation__p {
+    color: white;
+  }
+  .automation__b {
+    border-color: white;
+    color: white;
+    margin-top: 2rem;
+  }
+  &::before {
+    content: " ";
+    background: url(../images/automation_L.png) no-repeat;
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &::after {
+    content: " ";
+    background: url(../images/automation_R.png) no-repeat;
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+.opportunities {
+  padding: 4rem 0;
+  .opportunities__card__wraper {
+    padding-top: 3rem;
+    justify-content: center;
+    margin: auto;
+    .opportunities__card__paragraph {
+      font-size: 16px;
+    }
+    .opportunities__card__link {
+      font-size: 16px;
+      position: relative;
+      display: block;
+      margin-top: 50px;
+      transition: 0.3s ease;
+      &::after {
+        transition: 0.3s ease;
+        top: 5px;
+        background: url(../images/arrow-right.svg) no-repeat;
+        content: "";
+        display: inline-block;
+        height: 15px;
+        margin-left: 2px;
+        position: absolute;
+        width: 30px;
+      }
+      &:hover {
+        &::after {
+          transform: translateX(10px);
+        }
+      }
+    }
+  }
+  .links-card__wrapper {
+    align-items: flex-start;
+    padding-top: 4rem;
+    .col {
+      padding-right: 2rem;
+      img {
+        height: 36px;
+      }
+      .paragraph {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.extend {
+  position: relative;
+  padding-bottom: 18rem;
+  .row {
+    justify-content: center;
+    .col-3 {
+      img {
+        width: 192px;
+      }
+    }
+  }
+  &::after {
+    background: url("../images/extend-background.png") no-repeat;
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 259px;
+  }
+}
+
+.trust {
+  padding-top: 4rem;
+  background-color: var(--gray);
+  .row {
+    justify-content: center;
+    .col-8 {
+      border-radius: 3px;
+      padding: 40px;
+      background-color: white;
+      img {
+        margin: auto;
+        margin-bottom: 16px;
+      }
+      h2 {
+        line-height: 1.3;
+      }
+      p {
+        margin: auto;
+        max-width: 600px;
+      }
+      .download {
+        img {
+          margin-top: 2.5rem;
+        }
+      }
+    }
+  }
+  .trulia {
+    margin-top: 4rem;
+    .col-8 {
+      align-items: flex-start !important;
+      padding: 0;
+      img {
+        height: 368px;
+        width: 100%;
+        margin: 0;
+      }
+      .trulia-card {
+        text-align: left;
+        padding: 40px;
+        img {
+          height: 23px;
+          width: 78px;
+          margin-bottom: 35px;
+        }
+        p {
+          line-height: 1.5;
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+  .partners {
+    padding-top: 32px;
+    p {
+      text-align: center;
+      font-size: 20;
+    }
+    img {
+      margin-top: 24px;
+    }
+  }
+  .curve-container {
+    margin-bottom: -27px;
+  }
+}
+
+.plans {
+  .col-3 {
+    margin-left: 3rem;
+  }
+  .plan-card {
+    box-shadow: 1px 1px 6px rgb(219, 219, 219);
+    .header {
+      border-bottom: 1px solid #f4f5f7;
+      padding: 24px 12px;
+      h3 {
+        line-height: 32px;
+        font-size: 24px;
+      }
+    }
+    .header__marked {
+      background-color: #f4f5f7;
+    }
+    .body {
+      padding-bottom: 54px;
+      h1 {
+        margin-bottom: 35px;
+        line-height: 44px;
+        margin-top: 40px;
+        font-size: 44px;
+        font-weight: 600;
+      }
+
+      .paragraph {
+        font-size: 20px;
+        line-height: 1;
+        span {
+          font-size: 14px;
+        }
+      }
+      .aditional {
+        font-size: 16px;
+        line-height: 27px;
+      }
+      button {
+        margin: 32px 0;
+      }
+    }
+  }
+  .offer-card {
+    margin-top: 2rem;
+    margin-left: 3rem;
+    box-shadow: 1px 1px 6px rgb(219, 219, 219);
+    padding: 40px;
+    border-radius: 3px;
+    .offer_p {
+      font-size: 16px;
+    }
+  }
+  .offer-hr {
+    margin: 64px auto;
+    background: #dfe1e5;
+    width: 80%;
+  }
+}
+
+.start-advantages {
+  .row {
+    margin-top: 3rem;
+  }
+  .card {
+    padding-right: 3rem;
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+.footer {
+  margin-top: 4rem;
+  background-color: #f4f5f7;
+  padding-top: 20px;
+  .footer-body {
+    align-items: flex-start;
+    .footer-logo {
+      width: 125px;
+    }
+    .menu {
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--text-gray);
+      }
+      .menu-header {
+        color: var(--main-text);
+        font-weight: 700;
+        margin-bottom: 24px;
+      }
+      a {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 4;
+      }
+    }
+  }
+  .foter-diveder {
+    color: rgb(231, 231, 231);
+  }
+  .footer-bar {
+    padding: 10px 0;
+    .language-select {
+      display: flex;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+      select {
+        background: transparent;
+        border: 0;
+        &:focus-visible {
+          outline: 0;
+        }
+        color: var(--text-gray);
+      }
+    }
+    .links {
+      span {
+        margin-right: 30px;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--text-gray);
+      }
+    }
+    .registered {
+      margin-top: 0.6rem;
+      font-size: 14px;
+      font-weight: 400;
+      color: var(--text-gray);
+    }
+    .social-media-icons {
+      display: flex;
+      justify-content: flex-end;
+      img {
+        margin-right: 10px;
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .project__nav,
+  .global__nav {
+    padding-left: 1rem;
+    .nav__left .navbar-nav {
+      display: none;
+    }
+  }
+  .global__nav {
+    .nav__right .navbar-nav {
+      display: none;
+    }
+  }
+  .row {
+    display: block;
+    padding: 0 2rem;
+    .col-2,
+    .col-4,
+    .col-3,
+    .col-5,
+    .col-6,
+    .col-8 {
+      width: 100%;
+    }
+  }
+  .h1 {
+    font-size: 2rem;
+  }
+  .h2 {
+    font-size: 1.5rem;
+    line-height: 1.33333;
+  }
+  .paragraph {
+    font-size: 1.25rem;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+  }
+  .advantages {
+    .text-box {
+      padding: 0 !important;
+    }
+    .step-2 .col-6 {
+      margin-top: 4rem;
+    }
+    .step-3 {
+      margin-top: 4rem;
+    }
+  }
+  .integrations {
+    .integration-card {
+      margin-top: 3rem !important;
+      .integration-card__paragraph {
+        br {
+          display: none;
+        }
+      }
+      .card__link {
+        margin-top: 30px;
+      }
+    }
+    .step .text-box .btn-outlined {
+      margin-bottom: 2rem;
+    }
+    .step {
+      .col-6 {
+        padding-left: 0 !important;
+      }
+    }
+  }
+  .automation {
+    &::before,
+    &::after {
+      z-index: -1;
+    }
+  }
+
+  .opportunities {
+    .opportunities__card__wraper {
+      .col-4:nth-child(2) {
+        margin-left: 0 !important;
+      }
+      .col-4 {
+        margin-top: 2rem;
+      }
+    }
+    .links-card__wrapper .col {
+      margin-top: 3rem;
+    }
+  }
+  .extend {
+    .col-3 {
+      margin-bottom: 2rem;
+      img {
+        margin: auto;
+      }
+    }
+  }
+  .trust {
+    .trulia {
+      .col-8 img {
+        height: 260px;
+      }
+      .col-8 .trulia-card {
+        p {
+          font-size: 1.25rem;
+          letter-spacing: 0.3px;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+  .plans {
+    padding: 3rem 0.2rem;
+    .col-3 {
+      margin-left: 0;
+      margin-bottom: 3rem;
+    }
+    .offer-card {
+      margin-left: 0;
+    }
+  }
+  .start-advantages {
+    padding: 1rem 0.2rem;
+    .col-4 {
+      margin-top: 2rem !important;
+    }
+  }
+  .footer-bar {
+    .col-1 {
+      margin-bottom: 5px;
+    }
+    .social-media-icons {
+      margin-top: 8px;
+      img {
+        height: 24px !important;
+        width: 24px !important;
+      }
+    }
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .project__nav {
+    .nav__left .navbar-nav {
+      display: none;
+    }
+  }
+  .global__nav {
+    .nav__right .navbar-nav {
+      display: none;
+    }
+  }
+  .row {
+    display: block;
+    padding: 0 2rem;
+    .col-2,
+    .col-4,
+    .col-3,
+    .col-5,
+    .col-6,
+    .col-8 {
+      width: 100%;
+    }
+  }
+  .h1 {
+    font-size: 2rem;
+  }
+  .h2 {
+    font-size: 1.5rem;
+    line-height: 1.33333;
+  }
+  .paragraph {
+    font-size: 1.25rem;
+    letter-spacing: 0.3px;
+    line-height: 1.4;
+  }
+  .advantages {
+    .text-box {
+      padding: 0 !important;
+    }
+    .step-2 .col-6 {
+      margin-top: 4rem;
+    }
+    .step-3 {
+      margin-top: 4rem;
+    }
+  }
+  .integrations {
+    .integration-card {
+      margin-top: 3rem !important;
+      .integration-card__paragraph {
+        br {
+          display: none;
+        }
+      }
+      .card__link {
+        margin-top: 30px;
+      }
+    }
+    .step .text-box .btn-outlined {
+      margin-bottom: 2rem;
+    }
+    .step {
+      .col-6 {
+        padding-left: 0 !important;
+      }
+    }
+  }
+  .automation {
+    &::before,
+    &::after {
+      z-index: -1;
+    }
+  }
+  .opportunities {
+    .opportunities__card__wraper {
+      .col-4:nth-child(2) {
+        margin-left: 0 !important;
+      }
+      .col-4 {
+        margin-top: 2rem;
+      }
+    }
+    .links-card__wrapper .col {
+      margin-top: 3rem;
+    }
+  }
+  .extend {
+    .col-3 {
+      margin-bottom: 2rem;
+      img {
+        margin: auto;
+      }
+    }
+  }
+  .trust {
+    .trulia {
+      .col-8 img {
+        height: 260px;
+      }
+      .col-8 .trulia-card {
+        p {
+          font-size: 1.25rem;
+          letter-spacing: 0.3px;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+  .plans {
+    padding: 3rem 0.2rem;
+    .col-3 {
+      margin-left: 0;
+      margin-bottom: 3rem;
+    }
+    .offer-card {
+      margin-left: 0;
+    }
+  }
+  .start-advantages {
+    padding: 1rem 0.2rem;
+    .col-4 {
+      margin-top: 2rem !important;
+    }
+  }
+  .footer-bar {
+    .col-1 {
+      margin-bottom: 5px;
+    }
+    .social-media-icons {
+      margin-top: 8px;
+      img {
+        height: 24px !important;
+        width: 24px !important;
+      }
+    }
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .global__nav {
+    .nav__right .navbar-nav {
+      display: flex;
+    }
+  }
+  .intro {
+    .col-4 {
+      padding-left: 2rem;
+    }
+  }
+  .h1 {
+    font-size: 2.75rem;
+  }
+  .h2 {
+    font-size: 2.25rem;
+    line-height: 1.33333333;
+  }
+  .paragraph {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  .row {
+    display: flex;
+    .col-2 {
+      width: 20%;
+    }
+    .col-3 {
+      width: 30%;
+    }
+    .col-4 {
+      width: 40%;
+    }
+    .col-5 {
+      width: 50%;
+    }
+    .col-6 {
+      width: 60%;
+    }
+    .col-8 {
+      width: 80%;
+    }
+  }
+  .advantages {
+    .step-2 .col-6 {
+      margin-top: 0;
+    }
+    .step-3 {
+      margin-top: 6rem;
+      display: block;
+      .col-3 {
+        width: 80%;
+        margin: auto;
+      }
+    }
+    .text-box {
+      padding-left: 30px !important;
+      padding-right: 1.5rem !important;
+    }
+  }
+  .integrations {
+    .integration-card {
+      margin-top: 5rem;
+      .integration-card__paragraph {
+        br {
+          display: block;
+        }
+      }
+      .card__link {
+        margin-top: 50px;
+      }
+    }
+    .step {
+      .col-6 {
+        padding-left: 1rem !important;
+      }
+    }
+  }
+  .automation {
+    &::before,
+    &::after {
+      z-index: -1;
+    }
+  }
+  .opportunities {
+    .opportunities__card__wraper {
+      .col-4:nth-child(2) {
+        margin-left: 2rem !important;
+      }
+      .col-4 {
+        margin-top: 0rem;
+      }
+    }
+    .links-card__wrapper .col {
+      margin-top: 0rem;
+    }
+  }
+  .extend {
+    .col-3 {
+      margin-bottom: 0;
+      img {
+        margin: inherit;
+      }
+    }
+  }
+  .trust {
+    .trulia {
+      .col-8 img {
+        height: 368px;
+      }
+      .col-8 .trulia-card {
+        img {
+          margin-bottom: 0.3rem;
+        }
+        p {
+          font-size: 1.25rem;
+          line-height: 1.5;
+        }
+      }
+    }
+    .card__link {
+      margin-top: 1rem;
+    }
+  }
+  .plans {
+    padding: 3rem 0.3rem;
+    .col-3 {
+      margin-left: 3rem;
+      margin-bottom: 0;
+    }
+    .offer-card {
+      margin-left: 3rem;
+    }
+  }
+  .start-advantages {
+    padding: 3rem 0.2rem;
+    .col-4 {
+      margin-top: 0rem !important;
+    }
+  }
+  .footer-bar {
+    .col-1 {
+      margin-bottom: 0;
+    }
+    br {
+      display: none;
+    }
+    .social-media-icons {
+      margin-top: 0;
+      img {
+        height: 32px !important;
+        width: 32px !important;
+      }
+    }
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .project__nav {
+    .nav__left .navbar-nav {
+      display: inherit !important;
+    }
+  }
+  .advantages {
+    .step-3 {
+      margin-top: 8rem;
+      display: flex;
+      .col-3 {
+        width: 30%;
+        margin: inherit;
+      }
+    }
+    .text-box {
+      padding-left: 100px !important;
+      padding-right: 2.5rem !important;
+    }
+  }
+  .automation {
+    &::before,
+    &::after {
+      z-index: inherit;
+    }
+  }
+  .trust {
+    .trulia {
+      .col-8 .trulia-card {
+        img {
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1.25rem;
+          line-height: 1.5;
+        }
+      }
+    }
+    .card__link {
+      margin-top: 50px;
+    }
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1300px) {
+  .intro {
+    .col-4 {
+      padding-left: 0;
+    }
+  }
+  .h1 {
+    font-size: 2.75rem;
+  }
+}
