@@ -263,8 +263,9 @@ section {
 
 .horizontal-line {
   width: 50%;
+  height: 3px;
   text-align: center;
-  color: var(--gray);
+  background: var(--gray);
   margin: 64px auto;
 }
 
@@ -362,7 +363,7 @@ section {
 
 .advantages {
   max-width: 1400px;
-  padding-top: 6rem;
+  padding-top: 64px;
 }
 
 .advantages .paragraph {
@@ -370,7 +371,7 @@ section {
 }
 
 .advantages .step {
-  margin-top: 5rem;
+  margin-top: 64px;
 }
 
 .advantages .step-1 .text-box {
@@ -613,7 +614,7 @@ section {
 }
 
 .trust .partners {
-  padding-top: 32px;
+  padding-top: 48px;
 }
 
 .trust .partners p {
@@ -664,6 +665,12 @@ section {
   font-weight: 600;
 }
 
+.plans .plan-card .body .btn-outlined {
+  font-size: 16px;
+  line-height: 1;
+  height: 40px;
+}
+
 .plans .plan-card .body .paragraph {
   font-size: 20px;
   line-height: 1;
@@ -683,8 +690,9 @@ section {
 }
 
 .plans .offer-card {
+  margin-bottom: 16px;
   margin-top: 2rem;
-  margin-left: 3rem;
+  margin-right: 1.5rem;
   -webkit-box-shadow: 1px 1px 6px #dbdbdb;
           box-shadow: 1px 1px 6px #dbdbdb;
   padding: 40px;
@@ -720,7 +728,7 @@ section {
 .footer {
   margin-top: 4rem;
   background-color: #f4f5f7;
-  padding-top: 20px;
+  padding-top: 48px;
 }
 
 .footer .footer-body {
@@ -781,7 +789,7 @@ section {
 }
 
 .footer .footer-bar .links span {
-  margin-right: 30px;
+  margin-right: 13px;
   font-size: 14px;
   font-weight: 400;
   color: var(--text-gray);
@@ -804,8 +812,8 @@ section {
 
 .footer .footer-bar .social-media-icons img {
   margin-right: 10px;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -823,7 +831,7 @@ section {
   }
   .row {
     display: block;
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
   .row .col-2,
   .row .col-4,
@@ -909,7 +917,7 @@ section {
     margin-bottom: 3rem;
   }
   .plans .offer-card {
-    margin-left: 0;
+    margin-right: 0;
   }
   .start-advantages {
     padding: 1rem 0.2rem;
@@ -939,7 +947,7 @@ section {
   }
   .row {
     display: block;
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
   .row .col-2,
   .row .col-4,
@@ -1018,7 +1026,7 @@ section {
     margin-bottom: 3rem;
   }
   .plans .offer-card {
-    margin-left: 0;
+    margin-right: 0;
   }
   .start-advantages {
     padding: 1rem 0.2rem;
@@ -1044,6 +1052,9 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .intro .h1 {
+    font-size: 44px;
   }
   .intro .col-4 {
     padding-left: 2rem;
@@ -1087,21 +1098,30 @@ section {
   }
   .advantages .step-3 {
     margin-top: 6rem;
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
-  .advantages .step-3 .col-3 {
-    width: 80%;
+  .advantages .step-3 .col-4 {
+    width: 40%;
     margin: auto;
   }
   .advantages .text-box {
     padding-left: 30px !important;
     padding-right: 1.5rem !important;
   }
-  .integrations .integration-card {
+  .integrations .card-wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .integrations .card-wrapper .col-3 {
+    width: 50%;
+  }
+  .integrations .card-wrapper .integration-card {
     margin-top: 48px !important;
   }
-  .integrations .integration-card .integration-card__paragraph br {
-    display: block;
+  .integrations .card-wrapper .integration-card .integration-card__paragraph br {
+    display: none;
   }
   .integrations .step .col-6 {
     padding-left: 1rem !important;
@@ -1109,10 +1129,14 @@ section {
   .automation::before, .automation::after {
     z-index: -1;
   }
+  .opportunities .paragraph {
+    font-size: 16px;
+  }
   .opportunities .opportunities__card__wraper .col-4:nth-child(2) {
     margin-left: 2rem !important;
   }
   .opportunities .opportunities__card__wraper .col-4 {
+    width: 50%;
     margin-top: 0rem;
   }
   .opportunities .links-card__wrapper .col {
@@ -1124,11 +1148,17 @@ section {
   .extend .col-3 img {
     margin: inherit;
   }
+  .extend .col-5 {
+    width: 70%;
+  }
+  .trust .paragraph {
+    font-size: 16px;
+  }
   .trust .trulia .col-8 img {
     height: 368px;
   }
   .trust .trulia .col-8 .trulia-card img {
-    margin-bottom: 0.3rem;
+    margin-bottom: 32px;
   }
   .trust .trulia .col-8 .trulia-card p {
     font-size: 1.25rem;
@@ -1145,7 +1175,7 @@ section {
     margin-bottom: 0;
   }
   .plans .offer-card {
-    margin-left: 3rem;
+    margin-right: 1.5rem;
   }
   .start-advantages {
     padding: 3rem 0.2rem;
@@ -1163,8 +1193,8 @@ section {
     margin-top: 0;
   }
   .footer-bar .social-media-icons img {
-    height: 32px !important;
-    width: 32px !important;
+    height: 24px !important;
+    width: 24px !important;
   }
 }
 
@@ -1179,7 +1209,7 @@ section {
     display: -ms-flexbox;
     display: flex;
   }
-  .advantages .step-3 .col-3 {
+  .advantages .step-3 .col-4 {
     width: 30%;
     margin: inherit;
   }
@@ -1189,6 +1219,19 @@ section {
   .advantages .text-box {
     padding-left: 32px !important;
     padding-right: 2.5rem !important;
+  }
+  .integrations .card-wrapper {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .integrations .card-wrapper .col-3 {
+    width: 30%;
+  }
+  .opportunities .paragraph {
+    font-size: 16px;
+  }
+  .opportunities .opportunities__card__wraper .col-4 {
+    width: 40%;
   }
   .automation::before, .automation::after {
     z-index: inherit;
@@ -1202,6 +1245,13 @@ section {
   }
   .trust .card__link {
     margin-top: 50px;
+  }
+  .extend .col-5 {
+    width: 50%;
+  }
+  .footer-bar .social-media-icons img {
+    height: 24px !important;
+    width: 24px !important;
   }
 }
 

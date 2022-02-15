@@ -249,8 +249,9 @@ section {
 
 .horizontal-line {
   width: 50%;
+  height: 3px;
   text-align: center;
-  color: var(--gray);
+  background: var(--gray);
   margin: 64px auto;
 }
 
@@ -353,14 +354,14 @@ section {
 
 .advantages {
   max-width: 1400px;
-  padding-top: 6rem;
+  padding-top: 64px;
 
   .paragraph {
     font-size: 20px;
   }
 
   .step {
-    margin-top: 5rem;
+    margin-top: 64px;
   }
 
   .step-1 {
@@ -602,7 +603,7 @@ section {
   }
 
   .partners {
-    padding-top: 32px;
+    padding-top: 48px;
 
     p {
       text-align: center;
@@ -652,6 +653,12 @@ section {
         font-weight: 600;
       }
 
+      .btn-outlined {
+        font-size: 16px;
+        line-height: 1;
+        height: 40px;
+      }
+
       .paragraph {
         font-size: 20px;
         line-height: 1;
@@ -672,8 +679,9 @@ section {
   }
 
   .offer-card {
+    margin-bottom: 16px;
     margin-top: 2rem;
-    margin-left: 3rem;
+    margin-right: 1.5rem;
     box-shadow: 1px 1px 6px rgb(219, 219, 219);
     padding: 40px;
     border-radius: 3px;
@@ -711,7 +719,7 @@ section {
 .footer {
   margin-top: 4rem;
   background-color: #f4f5f7;
-  padding-top: 20px;
+  padding-top: 48px;
 
   .footer-body {
     align-items: flex-start;
@@ -769,7 +777,7 @@ section {
 
     .links {
       span {
-        margin-right: 30px;
+        margin-right: 13px;
         font-size: 14px;
         font-weight: 400;
         color: var(--text-gray);
@@ -788,8 +796,8 @@ section {
 
       img {
         margin-right: 10px;
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
       }
     }
   }
@@ -814,7 +822,7 @@ section {
 
   .row {
     display: block;
-    padding: 0 2rem;
+    padding: 0 1rem;
 
     .col-2,
     .col-4,
@@ -949,7 +957,7 @@ section {
     }
 
     .offer-card {
-      margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -993,7 +1001,7 @@ section {
 
   .row {
     display: block;
-    padding: 0 2rem;
+    padding: 0 1rem;
 
     .col-2,
     .col-4,
@@ -1116,7 +1124,7 @@ section {
     }
 
     .offer-card {
-      margin-left: 0;
+      margin-right: 0;
     }
   }
 
@@ -1153,6 +1161,9 @@ section {
   }
 
   .intro {
+    .h1 {
+      font-size: 44px;
+    }
     .col-4 {
       padding-left: 2rem;
     }
@@ -1207,10 +1218,10 @@ section {
 
     .step-3 {
       margin-top: 6rem;
-      display: block;
+      display: flex;
 
-      .col-3 {
-        width: 80%;
+      .col-4 {
+        width: 40%;
         margin: auto;
       }
     }
@@ -1222,12 +1233,20 @@ section {
   }
 
   .integrations {
-    .integration-card {
-      margin-top: 48px !important;
+    .card-wrapper {
+      flex-wrap: wrap;
 
-      .integration-card__paragraph {
-        br {
-          display: block;
+      .col-3 {
+        width: 50%;
+      }
+
+      .integration-card {
+        margin-top: 48px !important;
+
+        .integration-card__paragraph {
+          br {
+            display: none;
+          }
         }
       }
     }
@@ -1247,12 +1266,17 @@ section {
   }
 
   .opportunities {
+    .paragraph {
+      font-size: 16px;
+    }
+
     .opportunities__card__wraper {
       .col-4:nth-child(2) {
         margin-left: 2rem !important;
       }
 
       .col-4 {
+        width: 50%;
         margin-top: 0rem;
       }
     }
@@ -1270,9 +1294,17 @@ section {
         margin: inherit;
       }
     }
+
+    .col-5 {
+      width: 70%;
+    }
   }
 
   .trust {
+    .paragraph {
+      font-size: 16px;
+    }
+
     .trulia {
       .col-8 img {
         height: 368px;
@@ -1280,7 +1312,7 @@ section {
 
       .col-8 .trulia-card {
         img {
-          margin-bottom: 0.3rem;
+          margin-bottom: 32px;
         }
 
         p {
@@ -1304,7 +1336,7 @@ section {
     }
 
     .offer-card {
-      margin-left: 3rem;
+      margin-right: 1.5rem;
     }
   }
 
@@ -1329,8 +1361,8 @@ section {
       margin-top: 0;
 
       img {
-        height: 32px !important;
-        width: 32px !important;
+        height: 24px !important;
+        width: 24px !important;
       }
     }
   }
@@ -1349,7 +1381,7 @@ section {
       margin-top: 9rem;
       display: flex;
 
-      .col-3 {
+      .col-4 {
         width: 30%;
         margin: inherit;
       }
@@ -1362,6 +1394,28 @@ section {
     .text-box {
       padding-left: 32px !important;
       padding-right: 2.5rem !important;
+    }
+  }
+
+  .integrations {
+    .card-wrapper {
+      flex-wrap: nowrap;
+
+      .col-3 {
+        width: 30%;
+      }
+    }
+  }
+
+  .opportunities {
+    .paragraph {
+      font-size: 16px;
+    }
+
+    .opportunities__card__wraper {
+      .col-4 {
+        width: 40%;
+      }
     }
   }
 
@@ -1389,6 +1443,17 @@ section {
     .card__link {
       margin-top: 50px;
     }
+  }
+
+  .extend {
+    .col-5 {
+      width: 50%;
+    }
+  }
+
+  .footer-bar .social-media-icons img {
+    height: 24px !important;
+    width: 24px !important;
   }
 }
 
